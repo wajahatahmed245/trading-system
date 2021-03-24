@@ -1,18 +1,42 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
 
-from trading.models import Broker, AccountSize
+from trading.models import Broker, AccountSize, TradingUser
+
+
+def create_builtin_user(mail, password, name):
+    try:
+        user = User.objects.create_user(username=mail, email=mail, password=password)
+        user.first_name = name
+        user.save()
+        return user
+    except Exception as error_message:
+        raise ModuleNotFoundError(str(error_message))
+
+
+def validate_password(password, confirm_password):
+    password_match = password == confirm_password
+    if not password_match:
+        raise ModuleNotFoundError("password are not matched")
 
 
 def make_user(request_obj):
     mail = request_obj.POST.get('mail')
+    name = request_obj.POST.get('name')
     phone = request_obj.POST.get('phone')
     password = request_obj.POST.get('password')
     confirmPassword = request_obj.POST.get('confirmPassword')
-    broker = request_obj.POST.get('broker')
-    account = request_obj.POST.get('account')
+    validate_password(password=password, confirm_password=confirmPassword)
+    broker = int(request_obj.POST.get('broker'))
+    account = int(request_obj.POST.get('account'))
+    broker_obj = Broker.objects.get(pk=broker)
+    account_size_obj = AccountSize.objects.get(pk=account)
+    user = create_builtin_user(mail=mail, password=password, name=name)
+    trading_user = TradingUser(user=user, broker=broker_obj, phone_number=phone, account_size=account_size_obj)
+    trading_user.save()
 
 
 def index(request):
@@ -20,13 +44,19 @@ def index(request):
 
 
 def register(request):
-    print()
-    if request.POST:
-        print()
     all_brokers = Broker.objects.all()
     all_account_size = AccountSize.objects.all()
-
     context = {'broker': all_brokers, "all_account_size": all_account_size}
+
+    if request.POST:
+        try:
+            make_user(request_obj=request)
+            context.update({"alert": 'registered succefully'})
+
+        except Exception as error_message:
+            context.update({"alert": str(error_message)})
+            return render(request, 'trading/register.html', context=context)
+
     return render(request, 'trading/register.html', context=context)
 
 
