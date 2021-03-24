@@ -6,302 +6,313 @@
 
 {% block content %}
     <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-light py-3">
-    <div class="container">
-        <a href="/index.html">
-            <img src="{% static 'trading/img/Trading.png' %}" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3">
+        <div class="container">
+            <a href="/index.html">
+                <img src="{% static 'trading/img/Trading.png' %}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-white mr-3" href="#pricing-table">Pricing</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white mr-3" href="#pricing-table">Pricing</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link text-white mr-3" href="/faq.html">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white mr-4" href="{% url 'contact' %}">Contact</a>
-                </li>
-                <li>
-                    <a class="btn btn-warning my-2 my-sm-0 px-4 py-2" id="orange-btn" href="" data-toggle="modal"
-                       data-target="#exampleModal">Login</a>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mr-3" href="/faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mr-4" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-warning my-2 my-sm-0 px-4 py-2" id="orange-btn" href="" data-toggle="modal"
+                           data-target="#exampleModal">Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<section class="banner-main px-5">
-    <div class="banner px-5">
+    <section class="banner-main px-5">
+        <div class="banner px-5">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h1>Lorem Ipsum Some Heading
+                        Text Here Lorem</h1>
+                    <p class="mt-4 text-secondary mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum is simply dummy text. </p>
+                    <a class="btn btn-warning mt-5 my-sm-0 px-4 py-2" id="orange-btn-big" href="" type="submit">Get
+                        Funded</a>
+
+                </div>
+                <div class="col-md-5">
+                    <img src="{% static 'trading/img/banner.png' %}" class='mt-5 w-100 banner-img' alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bg-white shadow container white-section">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'trading/img/green.png' %}" alt="">
+                    <h3 class="mt-2">Icone Name</h3>
+                    <p class="para text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                        perspiciatis vitae sed nobis aperiam cum quasi veniam sapiente, nemo repudiandae dolor explicabo
+                        similique deleniti facere cumque laboriosam. Mollitia, blanditiis nostrum.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'trading/img/green.png' %}" alt="">
+                    <h3 class="mt-2">Icone Name</h3>
+                    <p class="para text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                        perspiciatis vitae sed nobis aperiam cum quasi veniam sapiente, nemo repudiandae dolor explicabo
+                        similique deleniti facere cumque laboriosam. Mollitia, blanditiis nostrum.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'trading/img/green.png' %}" alt="">
+                    <h3 class="mt-2">Icone Name</h3>
+                    <p class="para text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                        perspiciatis vitae sed nobis aperiam cum quasi veniam sapiente, nemo repudiandae dolor explicabo
+                        similique deleniti facere cumque laboriosam. Mollitia, blanditiis nostrum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main container pt-4">
+        <h3 class="mt-5 text-center">Some Heading</h3>
         <div class="row align-items-center">
-            <div class="col-md-7">
-                <h1>Lorem Ipsum Some Heading
-                    Text Here Lorem</h1>
-                <p class="mt-4 text-secondary mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum is simply dummy text. </p>
-                <a class="btn btn-warning mt-5 my-sm-0 px-4 py-2" id="orange-btn-big" href="" type="submit">Get
-                    Funded</a>
+            <div class="col-md-6 text-center">
+                <img src="img/table-img.png" class="w-75 mt-4" alt="">
+            </div>
+            <div class="col-md-6">
+                <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a
+                    galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries,
+                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                    in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with
+                    desktop publishing software like Aldus PageMaker including versions of Lorem</p>
+            </div>
+        </div>
 
+        <div class="grey-section p-5 mt-5 ind-tab">
+            <div class="table-responsive ">
+                <table class="table table-bordered">
+                    <tr>
+                        <th></th>
+                        <th><h5>You trading with your own</h5></th>
+                        <th><h5>You trading with our</h5></th>
+                    </tr>
+                    <tr class="py-4">
+                        <td class="pl-5 scene"><h5>Scenario #1</h5></td>
+                        <td>Scenario #2</td>
+                        <td>Scenario #3</td>
+                    </tr>
+                    <tr class="py-4">
+                        <td class="pl-5 scene"><h5>Scenario #2</h5></td>
+                        <td>Scenario #2</td>
+                        <td>Scenario #3</td>
+                    </tr>
+                    <tr class="py-4">
+                        <td class="pl-5 scene"><h5>Scenario #3</h5></td>
+                        <td>Scenario #2</td>
+                        <td>Scenario #3</td>
+                    </tr>
+                </table>
             </div>
-            <div class="col-md-5">
-                <img src="{% static 'trading/img/banner.png' %}" class='mt-5 w-100 banner-img' alt="">
-            </div>
-        </div>
-    </div>
-    <div class="bg-white shadow container white-section">
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="{% static 'trading/img/green.png' %}" alt="">
-                <h3 class="mt-2">Icone Name</h3>
-                    <p class="para text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                        perspiciatis vitae sed nobis aperiam cum quasi veniam sapiente, nemo repudiandae dolor explicabo
-                        similique deleniti facere cumque laboriosam. Mollitia, blanditiis nostrum.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="{% static 'trading/img/green.png' %}" alt="">
-                <h3 class="mt-2">Icone Name</h3>
-                    <p class="para text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                        perspiciatis vitae sed nobis aperiam cum quasi veniam sapiente, nemo repudiandae dolor explicabo
-                        similique deleniti facere cumque laboriosam. Mollitia, blanditiis nostrum.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="{% static 'trading/img/green.png' %}" alt="">
-                <h3 class="mt-2">Icone Name</h3>
-                    <p class="para text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                        perspiciatis vitae sed nobis aperiam cum quasi veniam sapiente, nemo repudiandae dolor explicabo
-                        similique deleniti facere cumque laboriosam. Mollitia, blanditiis nostrum.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="main container pt-4">
-    <h3 class="mt-5 text-center">Some Heading</h3>
-    <div class="row align-items-center">
-        <div class="col-md-6 text-center">
-            <img src="img/table-img.png" class="w-75 mt-4" alt="">
-        </div>
-        <div class="col-md-6">
-            <p class="text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
-                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                desktop publishing software like Aldus PageMaker including versions of Lorem</p>
-        </div>
-    </div>
-
-    <div class="grey-section p-5 mt-5 ind-tab">
-        <div class="table-responsive ">
-            <table class="table table-bordered">
-                <tr>
-                    <th></th>
-                    <th><h5>You trading with your own</h5></th>
-                    <th><h5>You trading with our</h5></th>
-                </tr>
-                <tr class="py-4">
-                    <td class="pl-5 scene"><h5>Scenario #1</h5></td>
-                    <td>Scenario #2</td>
-                    <td>Scenario #3</td>
-                </tr>
-                <tr class="py-4">
-                    <td class="pl-5 scene"><h5>Scenario #2</h5></td>
-                    <td>Scenario #2</td>
-                    <td>Scenario #3</td>
-                </tr>
-                <tr class="py-4">
-                    <td class="pl-5 scene"><h5>Scenario #3</h5></td>
-                    <td>Scenario #2</td>
-                    <td>Scenario #3</td>
-                </tr>
-            </table>
-        </div>
-        <div class="text-center">
-            <a class="btn btn-warning mt-3 px-4 py-2" id="orange-btn-big" type="submit">Get Funded</a>
-        </div>
-    </div>
-    <div class="green-section p-5">
-        <h2 class="yellow text-center">How it works?</h2>
-        <div class="row mt-5">
-            <div class="col-md-1"></div>
-            <div class="col-md-3 steps">
-                <h5 class="float-right">Step#1</h5>
-            </div>
-            <div class="col-md-7 steps">
-                <h5>Sign up</h5>
-                <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur aspernatur
-                    explicabo corporis quae recusandae nostrum, similique in beatae, quos, dolore optio maiores
-                    reiciendis unde. Dolor natus aperiam sit dolore.</p>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-1"></div>
-            <div class="col-md-3 steps">
-                <h5 class="float-right">Step#2</h5>
-            </div>
-            <div class="col-md-7 steps">
-                <h5>Start Trading</h5>
-                <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur aspernatur
-                    explicabo corporis quae recusandae nostrum, similique in beatae, quos, dolore optio maiores
-                    reiciendis unde. Dolor natus aperiam sit dolore.</p>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-1"></div>
-            <div class="col-md-3 steps">
-                <h5 class="float-right">Step#3</h5>
-            </div>
-            <div class="col-md-7 steps">
-                <h5>Get Paid Monthly</h5>
-                <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur aspernatur
-                    explicabo corporis quae recusandae nostrum, similique in beatae, quos, dolore optio maiores
-                    reiciendis unde. Dolor natus aperiam sit dolore.</p>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-    </div>
-
-    <h3 class="mt-5 text-center" id="pricing-table">Some Heading</h3>
-    <div class="steps mt-3">
-        <p class="text-center px-5 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            velit ea dolor eius vitae temporibus quibusdam nemo dignissimos quod, distinctio doloremque repellendus
-            maiores enim assumenda nostrum architecto sunt aliquam porro!</p>
-    </div>
-
-    <div class="row mt-5 justify-content-center">
-        <div class="col-md-4">
-            <div class="card text-center shadow py-4 px-3 mt-2">
-                <h4>Option#1</h4>
-                <h1 class="price">$5</h1>
-                <p class="mt-4">Feature 1</p>
-                <p>Feature 2</p>
-                <p>Feature 3</p>
-                <a href="{% url 'register' %}" class="btn btn-warning mt-3 px-4 py-2" id="orange-btn-big" type="submit">Choose
-                    this Plan</a>
+            <div class="text-center">
+                <a class="btn btn-warning mt-3 px-4 py-2" id="orange-btn-big" type="submit">Get Funded</a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card text-center shadow py-4 px-3 mt-2">
-                <h4>Option#1</h4>
-                <h1 class="price">$5</h1>
-                <p class="mt-4">Feature 1</p>
-                <p>Feature 2</p>
-                <p>Feature 3</p>
-                <a href="{% url 'register' %}" class="btn btn-warning mt-3 px-4 py-2" id="orange-btn-big" type="submit">Choose
-                    this Plan</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="steps mt-5">
-        <p class="text-center px-5 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            velit ea dolor eius vitae temporibus quibusdam nemo dignissimos quod, distinctio doloremque repellendus
-            maiores enim assumenda nostrum architecto sunt aliquam porro!</p>
-    </div>
-    </div>
-</section>
-
-
-<footer class="px-5 mt-5 mb-5 footer-pad">
-    <div class="container-fluid m-0 p-0">
-        <div class="footer mt-5 p-5">
-            <div class="row">
-                <div class="col-md-4">
-                    <h1 class="text-white">Trading</h1>
-                    <div class="steps mt-3">
-                        <p class="text-light">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-                            pariatur aspernatur explicabo corporis quae recusandae nostrum,
-                            similique in beatae, quos, dolore optio maiores reiciendis unde.
-                            Dolor natus aperiam sit dolore.
-                        </p>
-                    </div>
+        <div class="green-section p-5">
+            <h2 class="yellow text-center">How it works?</h2>
+            <div class="row mt-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-3 steps">
+                    <h5 class="float-right">Step#1</h5>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="text-white mt-4">Contact Us</h5>
-                    <div class="steps mt-3">
-                        <p class="text-light">Cell Number: +12334546547657</p>
-                        <p class="text-light">WhatsApp Number: +12334546547657</p>
-                        <p class="text-light">Mon to Fri - 9am to 6am WAT</p>
-                        <p class="text-light">Address: New York, NY</p>
-                    </div>
+                <div class="col-md-7 steps">
+                    <h5>Sign up</h5>
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur
+                        aspernatur
+                        explicabo corporis quae recusandae nostrum, similique in beatae, quos, dolore optio maiores
+                        reiciendis unde. Dolor natus aperiam sit dolore.</p>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="text-white mt-4">Apply Online</h5>
-                    <a
-                            class="btn btn-warning mt-3 px-4 py-2"
-                            id="orange-btn-big"
-                            type="submit"
-                    >Get Funded</a
-                    >
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-3 steps">
+                    <h5 class="float-right">Step#2</h5>
+                </div>
+                <div class="col-md-7 steps">
+                    <h5>Start Trading</h5>
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur
+                        aspernatur
+                        explicabo corporis quae recusandae nostrum, similique in beatae, quos, dolore optio maiores
+                        reiciendis unde. Dolor natus aperiam sit dolore.</p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-3 steps">
+                    <h5 class="float-right">Step#3</h5>
+                </div>
+                <div class="col-md-7 steps">
+                    <h5>Get Paid Monthly</h5>
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur
+                        aspernatur
+                        explicabo corporis quae recusandae nostrum, similique in beatae, quos, dolore optio maiores
+                        reiciendis unde. Dolor natus aperiam sit dolore.</p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+
+        <h3 class="mt-5 text-center" id="pricing-table">Some Heading</h3>
+        <div class="steps mt-3">
+            <p class="text-center px-5 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+                velit ea dolor eius vitae temporibus quibusdam nemo dignissimos quod, distinctio doloremque repellendus
+                maiores enim assumenda nostrum architecto sunt aliquam porro!</p>
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-4">
+                <div class="card text-center shadow py-4 px-3 mt-2">
+                    <h4>Option#1</h4>
+                    <h1 class="price">$5</h1>
+                    <p class="mt-4">Feature 1</p>
+                    <p>Feature 2</p>
+                    <p>Feature 3</p>
+                    <a href="{% url 'register' %}" class="btn btn-warning mt-3 px-4 py-2" id="orange-btn-big"
+                       type="submit">Choose
+                        this Plan</a>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 steps mt-3">
-                    <p class="text-light text-center">All right reserved @ 2021 Trading</p>
+            <div class="col-md-4">
+                <div class="card text-center shadow py-4 px-3 mt-2">
+                    <h4>Option#1</h4>
+                    <h1 class="price">$5</h1>
+                    <p class="mt-4">Feature 1</p>
+                    <p>Feature 2</p>
+                    <p>Feature 3</p>
+                    <a href="{% url 'register' %}" class="btn btn-warning mt-3 px-4 py-2" id="orange-btn-big"
+                       type="submit">Choose
+                        this Plan</a>
                 </div>
-                <div class="col-md-3"></div>
             </div>
         </div>
-    </div>
-</footer>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="form pb-4 px-2">
+        <div class="steps mt-5">
+            <p class="text-center px-5 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+                velit ea dolor eius vitae temporibus quibusdam nemo dignissimos quod, distinctio doloremque repellendus
+                maiores enim assumenda nostrum architecto sunt aliquam porro!</p>
+        </div>
+        </div>
+    </section>
 
-                    <div class="form-group mt-3">
-                        <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
-                               aria-describedby="emailHelp" placeholder="Enter your email">
+
+    <footer class="px-5 mt-5 mb-5 footer-pad">
+        <div class="container-fluid m-0 p-0">
+            <div class="footer mt-5 p-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1 class="text-white">Trading</h1>
+                        <div class="steps mt-3">
+                            <p class="text-light">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                                pariatur aspernatur explicabo corporis quae recusandae nostrum,
+                                similique in beatae, quos, dolore optio maiores reiciendis unde.
+                                Dolor natus aperiam sit dolore.
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="form-group mt-3">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control form-control-lg" id="password"
-                               placeholder="Enter your password">
+                    <div class="col-md-4">
+                        <h5 class="text-white mt-4">Contact Us</h5>
+                        <div class="steps mt-3">
+                            <p class="text-light">Cell Number: +12334546547657</p>
+                            <p class="text-light">WhatsApp Number: +12334546547657</p>
+                            <p class="text-light">Mon to Fri - 9am to 6am WAT</p>
+                            <p class="text-light">Address: New York, NY</p>
+                        </div>
                     </div>
-
-                    <a class="btn btn-warning btn-block mt-4 mb-1 px-4 py-2" id="orange-btn" href="/home.html"
-                       type="submit">Login</a>
-                </form>
+                    <div class="col-md-4">
+                        <h5 class="text-white mt-4">Apply Online</h5>
+                        <a
+                                class="btn btn-warning mt-3 px-4 py-2"
+                                id="orange-btn-big"
+                                type="submit"
+                        >Get Funded</a
+                        >
+                    </div>
+                </div>
                 <hr>
-                <p class="text-center">Create a new account!</p>
-                <a class="btn btn-warning btn-block mt-2 mb-1 px-4 py-2" id="green-btn" href="{% url 'register' %}"
-                   type="submit">Register</a>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 steps mt-3">
+                        <p class="text-light text-center">All right reserved @ 2021 Trading</p>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form pb-4 px-2" action="{% url 'login' %}" method="post">
+                        {% csrf_token %}
+
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp" name="username" placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control form-control-lg" name="password" id="password"
+                                   placeholder="Enter your password">
+                        </div>
+
+                        <a class="btn btn-warning btn-block mt-4 mb-1 px-4 py-2" id="orange-btn"
+                           type="submit">Login</a>
+                    </form>
+                    <hr>
+                    <p class="text-center">Create a new account!</p>
+                    <a class="btn btn-warning btn-block mt-2 mb-1 px-4 py-2" id="green-btn" href="{% url 'register' %}"
+                       type="submit">Register</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
     </body>
-        {% endblock %}
+{% endblock %}

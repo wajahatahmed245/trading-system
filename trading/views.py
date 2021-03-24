@@ -2,9 +2,13 @@ from django.contrib.auth.models import User
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import HttpResponse
 
-from trading.models import Broker, AccountSize, TradingUser
+from trading.models import Broker
+from trading.models import AccountSize
+from trading.models import TradingUser
+
+from django.contrib.auth import login, logout
+from django.contrib.auth import authenticate
 
 
 def create_builtin_user(mail, password, name):
@@ -62,3 +66,22 @@ def register(request):
 
 def contact(request):
     return render(request, 'trading/contact.html')
+
+
+def log_in(request):
+    if request.POST:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return render(request, 'trading/home.html')
+
+        else:
+            pass
+    return render(request, 'trading/contact.html')
+
+
+def logout_page(request):
+    logout(request)
+    return render(request, 'trading/index.html')
