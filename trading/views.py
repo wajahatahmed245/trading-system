@@ -9,6 +9,9 @@ def index(request):
 
 
 def register(request):
+    print()
+    if request.POST:
+        print()
     return render(request, 'trading/register.html')
 
 

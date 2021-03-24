@@ -40,7 +40,8 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <p class="text-center mt-5 border p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                <form class="form border p-5">
+                <form class="form border p-5" action="{% url 'register' %}" method="post">
+                    {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6 mt-3">
                             <label for="exampleInputEmail1">Name</label>
@@ -48,29 +49,29 @@
                         </div>
                         <div class="col-md-6 mt-3">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" name="mail" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
                     </div>
 
                     <div class="form-group mt-3">
                         <label for="exampleInputEmail1">Phone</label>
-                        <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone number">
+                        <input type="text" name="phone" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone number">
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mt-3">
                             <label for="exampleInputEmail1">Choose Password</label>
-                            <input type="password" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password">
+                            <input type="password" name="password" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password">
                         </div>
                         <div class="col-md-6 mt-3">
                             <label for="exampleInputEmail1">Confirm Password</label>
-                            <input type="password" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <input type="password" name="confirmPassword" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                         </div>
                     </div>
 
                     <div class="form-group mt-3">
                         <label for="exampleInputEmail1">Select Broker</label>
-                        <select class="form-control form-control-lg" name="" id="">
+                        <select class="form-control form-control-lg" name="broker" id="">
                             <option value="">Choose broker</option>
                             <option value="">Broker 1</option>
                             <option value="">Broker 2</option>
@@ -86,7 +87,7 @@
                         </select>
                     </div>
 
-                    <button type="button" class="btn btn-warning my-4 my-sm-0 px-4 py-2" id="orange-btn-x">Submit</button>
+                    <button type="submit" class="btn btn-warning my-4 my-sm-0 px-4 py-2" id="orange-btn-x">Submit</button>
                   </form>
             </div>
             <div class="col-md-2"></div>

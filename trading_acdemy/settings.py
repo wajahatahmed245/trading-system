@@ -76,9 +76,13 @@ WSGI_APPLICATION = 'trading_acdemy.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'test',
+        'USER': 'test_admin',
+        'PASSWORD': '123',
+        'HOST': os.environ.get('RDS_HOSTNAME', 'localhost'),
+        'PORT': os.environ.get('RDS_PORT', '5432'),
     }
 }
 
