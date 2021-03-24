@@ -25,7 +25,7 @@
                     <a class="nav-link text-white mr-3" href="/faq.html">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white mr-4" href="/contact.html">Contact</a>
+                    <a class="nav-link text-white mr-4" href="{% url 'contact' %}">Contact</a>
                 </li>
                 <li>
                     <a class="btn btn-warning my-2 my-sm-0 px-4 py-2" id="orange-btn" href="" data-toggle="modal" data-target="#exampleModal">Login</a>
@@ -215,7 +215,7 @@
                   </form>
                   <hr>
                   <p class="text-center">Create a new account!</p>
-                  <a class="btn btn-warning btn-block mt-2 mb-1 px-4 py-2" id="green-btn" href="/register.html" type="submit">Register</a>
+                  <a class="btn btn-warning btn-block mt-2 mb-1 px-4 py-2" id="green-btn" href="{% url 'register' %}" type="submit">Register</a>
             </div>
         </div>
         </div>
