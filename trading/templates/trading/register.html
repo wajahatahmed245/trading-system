@@ -1,0 +1,264 @@
+{% extends 'trading/base_generic.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+<body id="faq">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3">
+        <div class="container">
+            <a href="/index.html">
+                <img src="img/Trading.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white mr-3" href="/index.html#pricing-table">Pricing</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white mr-3" href="/faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white mr-4" href="/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="btn btn-warning my-2 my-sm-0 px-4 py-2" id="orange-btn" href="" data-toggle="modal" data-target="#exampleModal">Login</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <p class="text-center mt-5 border p-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <form class="form border p-5">
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="exampleInputEmail1">Phone</label>
+                        <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+                            <label for="exampleInputEmail1">Choose Password</label>
+                            <input type="password" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password">
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <label for="exampleInputEmail1">Confirm Password</label>
+                            <input type="password" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="exampleInputEmail1">Select Broker</label>
+                        <select class="form-control form-control-lg" name="" id="">
+                            <option value="">Choose broker</option>
+                            <option value="">Broker 1</option>
+                            <option value="">Broker 2</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="exampleInputEmail1">Select Account Size</label>
+                        <select class="form-control form-control-lg" name="account" id="account_select">
+                            <option value="">Choose Account Size</option>
+                            <option value="5">Account 1</option>
+                            <option value="10">Account 2</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-warning my-4 my-sm-0 px-4 py-2" id="orange-btn-x">Submit</button>
+                  </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="container" id="payment">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                        <!-- <div class="d-flex flex-row">
+                            <p id="account_no"></p>
+                            <p id="value"></p>
+                        </div> -->
+                        <nav class="nav nav-pills nav-fill">
+                            <a class="nav-link px-5 mt-2" id="account_no" aria-current="page" href=""></a>
+                            <a class="nav-link px-5 mt-2" href="" id="value"></a>
+                            <a class="nav-link px-5 mt-2 active" id="pay">Pay Now</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5" id="payment_form">
+            <h3 class="text-center mt-4">PayStack</h3>
+            <div class="row mt-4">
+                <div class="col-md-1"></div>
+                <div class="col-md-1 col-sm-2 col-xs-2">
+                    <img src="img/visa.png" class="w-100 payment_icons" alt="">
+                    <img src="img/master.svg" class="w-100 mt-2 payment_icons" alt="">
+                    <img src="img/direct.png" class="w-100 mt-2 payment_icons" alt="">
+                    <img src="img/bank.png" class="w-100 mt-2 payment_icons" alt="">
+                    <img src="img/phone.png" class="w-100 mt-2 payment_icons" alt="">
+                </div>
+                <div class="col-md-9 col-sm-10" id="pay_form">
+                    <div class="border h-100">
+                        <h4 class="text-center mt-3">Payment form</h4>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="container text-center">
+                <div class="row mt-5">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <h4>OR</h4>
+                        <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad libero dolor voluptatum earum distinctio, pariatur voluptas, repellendus nemo ullam optio mollitia. Saepe sed optio harum corrupti, tempore soluta tenetur nobis?</p>
+                        <h4 class="mt-5">OR</h4>
+                        <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad libero dolor voluptatum earum distinctio, pariatur voluptas, repellendus nemo ullam optio mollitia. Saepe sed optio harum corrupti, tempore soluta tenetur nobis?</p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="px-5 mt-5 mb-5 footer-pad">
+            <div class="container-fluid m-0 p-0">
+              <div class="footer mt-5 p-5">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h1 class="text-white">Trading</h1>
+                      <div class="steps mt-3">
+                        <p class="text-light">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                          pariatur aspernatur explicabo corporis quae recusandae nostrum,
+                          similique in beatae, quos, dolore optio maiores reiciendis unde.
+                          Dolor natus aperiam sit dolore.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <h5 class="text-white mt-4">Contact Us</h5>
+                      <div class="steps mt-3">
+                        <p class="text-light">Cell Number: +12334546547657</p>
+                        <p class="text-light">WhatsApp Number: +12334546547657</p>
+                        <p class="text-light">Mon to Fri - 9am to 6am WAT</p>
+                        <p class="text-light">Address: New York, NY</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <h5 class="text-white mt-4">Apply Online</h5>
+                      <a
+                        class="btn btn-warning mt-3 px-4 py-2"
+                        id="orange-btn-big"
+                        type="submit"
+                        >Get Funded</a
+                      >
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 steps mt-3">
+                        <p class="text-light text-center">All right reserved @ 2021 Trading</p>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+            </div>
+          </footer>
+
+          <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form class="form pb-4 px-2">
+
+                    <div class="form-group mt-3">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your password">
+                    </div>
+
+                    <a class="btn btn-warning btn-block mt-4 mb-1 px-4 py-2" id="orange-btn" href="/home.html" type="submit">Login</a>
+                  </form>
+                  <hr>
+                  <p class="text-center">Create a new account!</p>
+                  <a class="btn btn-warning btn-block mt-2 mb-1 px-4 py-2" id="green-btn" href="/register.html" type="submit">Register</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script>
+        $('.nav-link').click(function(){
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        });
+
+        $('#payment').hide();
+        $('#payment_form').hide();
+        $('#orange-btn-x').prop('disabled', true);
+
+        $('#account_select').change(function(){
+            if($(this).val() === ""){
+                $('#orange-btn-x').prop('disabled', true);
+            }else{
+                $('#orange-btn-x').prop('disabled', false);
+            }
+        });
+
+        $('#orange-btn-x').click(function(){
+            var text = $('#account_select option:selected').text();
+            var value = $('#account_select option:selected').val();
+
+            console.log(text, value);
+            if(text != "" && value != ""){
+                $('#payment').show();
+                $('#account_no').text(text);
+                $('#value').text('$'+value);
+            }
+        });
+
+        $('#pay').click(function(){
+            $('#payment_form').show();
+        });
+
+      </script>
+
+</body>
+        {% endblock %}
