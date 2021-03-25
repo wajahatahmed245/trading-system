@@ -1,0 +1,61 @@
+.sidenav {
+    width: 130px;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    padding: 8px 0;
+  }
+  
+  .sidenav a {
+    padding: 12px 16px 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #777;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #3AA800;
+  }
+
+  input[type='radio']:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #3AA800;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.slick-prev, .slick-next{
+    background-color: #3AA800 !important;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+th{
+    padding: 10px !important;
+}
+
+iframe{
+    border: none;
+}
