@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 
-from trading.models import Broker, Subject
+from trading.models import Broker, Subject, MonthlyStatistic
 from trading.models import AccountSize
 from trading.models import TradingUser
 
@@ -73,7 +73,8 @@ def contact(request):
 def home(request):
     user = request.user
     user_details = Subject.objects.filter(user__user=user).all()
-    context = dict(user=user, data_details=user_details)
+    monthly_stat = MonthlyStatistic.objects.filter(user__user=user).all()
+    context = dict(user=user, data_details=user_details, monthly_stat=monthly_stat)
     return render(request, 'trading/home.html', context=context)
 
 
@@ -84,7 +85,7 @@ def log_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            if request.session['error']:
+            if request.session.get('error'):
                 del request.session['error']
             return redirect('home')
 
@@ -97,6 +98,7 @@ def log_in(request):
 def logout_page(request):
     logout(request)
     return render(request, 'trading/index.html')
+
 
 def faq(request):
     return render(request, 'trading/faq.html')
