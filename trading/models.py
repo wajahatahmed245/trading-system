@@ -39,3 +39,5 @@ class Subject(models.Model):
     name = models.CharField(max_length=500)
     user = models.ForeignKey(TradingUser, on_delete=models.CASCADE)
     video_link = models.ManyToManyField(VideoLink)
+    def __str__(self):
+        return self.name

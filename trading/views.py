@@ -1,9 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
 # Create your views here.
 
-from trading.models import Broker
+from trading.models import Broker, Subject
 from trading.models import AccountSize
 from trading.models import TradingUser
 
@@ -68,11 +69,12 @@ def contact(request):
     return render(request, 'trading/contact.html')
 
 
+@login_required(login_url='index')
 def home(request):
-    user=request.user
-
-    context=dict(user=user)
-    return render(request, 'trading/home.html',context=context)
+    user = request.user
+    user_details = Subject.objects.filter(user__user=user).all()
+    context = dict(user=user, data_details=user_details)
+    return render(request, 'trading/home.html', context=context)
 
 
 def log_in(request):
