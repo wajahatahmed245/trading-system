@@ -25,7 +25,7 @@ SECRET_KEY = '+oji^)w-7z$55terh__qy+3hs7#r1%cz+ax+c4-*w%02nylvo='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'trading_acdemy.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test',
-        'USER': 'test_admin',
-        'PASSWORD': '123',
-        'HOST': os.environ.get('RDS_HOSTNAME', 'localhost'),
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': os.environ.get('RDS_HOSTNAME', 'db'),
         'PORT': os.environ.get('RDS_PORT', '5432'),
     }
 }
