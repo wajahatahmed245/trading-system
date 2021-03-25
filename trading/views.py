@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 
-from trading.models import Broker, Subject, MonthlyStatistic
+from trading.models import Broker, Subject, MonthlyStatistic, Payment
 from trading.models import AccountSize
 from trading.models import TradingUser
 
@@ -74,7 +74,9 @@ def home(request):
     user = request.user
     user_details = Subject.objects.filter(user__user=user).all()
     monthly_stat = MonthlyStatistic.objects.filter(user__user=user).all()
-    context = dict(user=user, data_details=user_details, monthly_stat=monthly_stat)
+    payment = Payment.objects.filter(user__user=user).all()
+
+    context = dict(user=user, data_details=user_details, monthly_stat=monthly_stat, payment=payment)
     return render(request, 'trading/home.html', context=context)
 
 

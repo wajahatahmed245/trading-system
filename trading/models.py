@@ -63,3 +63,17 @@ class MonthlyStatistic(models.Model):
 
     def __str__(self):
         return f"{self.month} - {self.year}"
+
+
+class Payment(models.Model):
+    month = models.CharField(max_length=500)
+    year = models.CharField(max_length=100)
+    profit = models.CharField(max_length=500)
+    life_account_funded = models.CharField(max_length=200)
+    payout = models.CharField(max_length=100)
+    withdrawn = models.CharField(max_length=100)
+    balance = models.CharField(max_length=100)
+    user = models.ForeignKey(TradingUser, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.month} - {self.profit}"

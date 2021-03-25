@@ -93,7 +93,7 @@
                                     </div>
                                     <hr>
                                     <span class="badge badge-info">{{ stat.status.name }}</span>
-                                       <hr>
+                                    <hr>
                                     <tr style="background-color: #1D4353; color: #fff;">
                                         <th colspan="2">{{ stat.month }} {{ stat.year }}</th>
                                     </tr>
@@ -162,87 +162,36 @@
                     <h4>Payments</h4>
 
                     <div class="stat_table mt-2 p-3">
-                        <div>
-                            <table class="table table-bordered">
-                                <tr style="background-color: #1D4353; color: #fff;">
-                                    <th colspan="2">March 2021</th>
-                                </tr>
-                                <tr>
-                                    <th>Profit</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Life Account Funded</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Payout</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Withdrawn</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Balance</th>
-                                    <th></th>
-                                </tr>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table table-bordered">
-                                <tr style="background-color: #1D4353; color: #fff;">
-                                    <th colspan="2">April 2021</th>
-                                </tr>
-                                <tr>
-                                    <th>Profit</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Life Account Funded</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Payout</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Withdrawn</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Balance</th>
-                                    <th></th>
-                                </tr>
-                            </table>
-                        </div>
-                        <div>
-                            <table class="table table-bordered">
-                                <tr style="background-color: #1D4353; color: #fff;">
-                                    <th colspan="2">May 2021</th>
-                                </tr>
-                                <tr>
-                                    <th>Profit</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Life Account Funded</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Payout</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Withdrawn</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>Balance</th>
-                                    <th></th>
-                                </tr>
-                            </table>
-                        </div>
+                        {% for payment in payment %}
+                            <div>
+                                <table class="table table-bordered">
+                                    <tr style="background-color: #1D4353; color: #fff;">
+                                        <th colspan="2">{{ payment.month }} {{ payment.year }}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Profit</th>
+                                        <th>{{payment.profit}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Life Account Funded</th>
+                                        <th>{{payment.life_account_funded}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Payout</th>
+                                        <th>{{payment.payout}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Withdrawn</th>
+                                        <th>{{payment.withdrawn}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Balance</th>
+                                        <th>{{payment.balance}}</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        {% endfor %}
+
 
                     </div>
 
