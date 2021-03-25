@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
@@ -68,6 +68,13 @@ def contact(request):
     return render(request, 'trading/contact.html')
 
 
+def home(request):
+    user=request.user
+
+    context=dict(user=user)
+    return render(request, 'trading/home.html',context=context)
+
+
 def log_in(request):
     if request.POST:
         username = request.POST.get('username')
@@ -75,10 +82,10 @@ def log_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return render(request, 'trading/home.html')
+            return redirect('home')
 
         else:
-            pass
+            return redirect('index')
     return render(request, 'trading/contact.html')
 
 
