@@ -84,9 +84,12 @@ def log_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            if request.session['error']:
+                del request.session['error']
             return redirect('home')
 
         else:
+            request.session['error'] = "Wrong credentials try again"
             return redirect('index')
     return render(request, 'trading/contact.html')
 
@@ -94,3 +97,6 @@ def log_in(request):
 def logout_page(request):
     logout(request)
     return render(request, 'trading/index.html')
+
+def faq(request):
+    return render(request, 'trading/faq.html')

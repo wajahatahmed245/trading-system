@@ -23,7 +23,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white mr-3" href="/faq.html">FAQ</a>
+                        <a class="nav-link text-white mr-3" href="{% url 'faq' %}">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white mr-4" href="{% url 'contact' %}">Contact</a>
@@ -41,6 +41,12 @@
         <div class="banner px-5">
             <div class="row align-items-center">
                 <div class="col-md-7">
+                    {% if request.session.error %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ request.session.error }}
+                        </div>
+                    {% endif %}
+
                     <h1>Lorem Ipsum Some Heading
                         Text Here Lorem</h1>
                     <p class="mt-4 text-secondary mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -294,7 +300,8 @@
                         </div>
 
                         <button class="btn btn-warning btn-block mt-4 mb-1 px-4 py-2" id="orange-btn"
-                           type="submit">Login</button>
+                                type="submit">Login
+                        </button>
                     </form>
                     <hr>
                     <p class="text-center">Create a new account!</p>
